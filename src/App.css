@@ -2,37 +2,89 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.timeline {
+  width: 1000px;
+  height: 500px;
+  background-color: bisque;
+  margin: 8px auto;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.timeline .event {
+  position: absolute;
+  bottom: 50px;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  background-color: white;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.timeline .bar {
+  position: absolute;
+  bottom: 24px;
+  width:1000px;
+  height: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline .pos {
+  position: absolute;
+  bottom: 20px;
+  background-color: white;
+  width: 5px;
+  height: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeline-v {
+  width: 500px;
+  height: 1000px;
+  background-color: bisque;
+  margin: 8px auto;
+  padding: 0;
+  position: relative;
+}
+
+.timeline-v .event {
+  position: absolute;
+  left: 50px;
+  background-color: white;
+  
+}
+
+.timeline-v .bar {
+  position: absolute;
+  margin:0;
+  padding: 0;
+  top: 0;
+  left: 24px;
+  width: 2px;
+  height: 1000px;
+  background-color: white;
+}
+
+.timeline-v .pos {
+  margin:0;
+  padding: 0;
+  position: absolute;
+  left: 16px;
+  background-color: white;
+  width: 16px;
+  height: 5px;
+}
+
+.timeline-v .time {
+  margin:0;
+  padding: 0;
+  position: absolute;
+  left: -24px;
+  background-color: white;
+  text-align: right;
+}
+
+.controls {
+  font-size: 30px;
+}
+
+.controls button {
+  font-size: 30px;
+  margin: 8px 16px;
 }
